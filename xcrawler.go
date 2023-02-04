@@ -77,7 +77,7 @@ func init() {
 	flag.StringVar(&header, "hd", "", "设置请求头k1=v1,k2=v2")
 	flag.StringVar(&headerFile, "hf", "", "请求头在此文件")
 	flag.StringVar(&url, "u", "", "url或起始url模版")
-	flag.StringVar(&params, "p", "", "初始参数,即第一页url模版的参数,多个逗号分隔")
+	flag.StringVar(&params, "p", "", "初始参数,即第一页url模版的参数,多个逗号分隔。@表示引用管道输入参数。")
 	flag.StringVar(&nextUrlParamsRule, "np", "", "下一页的url填充参数的变化规律,多个逗号分隔。\n+n:表示在上一页参数基础上加n")
 	flag.StringVar(&firstPipeParams, "pp", "", "此参数只在有管道输入时有效，表示只有第一个管道数据使用这个初始参数，之后的都使用-p的初始参数")
 	flag.IntVar(&totalPage, "tp", 0, "总共翻多少页")
